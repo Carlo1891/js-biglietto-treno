@@ -7,24 +7,37 @@
 */ 
 
 const userTripLength = prompt ('Inserire km totali viaggio (tariffa base 0.21€/km)');
-
-const priceTicket = userTripLength * 0.21;
-
-console.log(priceTicket);
+let priceTicket = userTripLength * 0.21;
+console.log (priceTicket)
 
 const userAgeDiscount = prompt ('Inserire età passeggero');
 
 if (userAgeDiscount < 18) {
-const juniorDiscount = ((priceTicket * 20)/ 100);
-const priceTicketFinal = juniorDiscount - priceTicket;
-
-console.log(priceTicketFinal);
+    let priceFinal = priceTicket - ((priceTicket * 20)/ 100);
+    console.log (priceFinal);
 } 
-else (userAgeDiscount > 64)
-const seniorDiscount = ((priceTicket * 40)/ 100);
-const priceTicketFinal = seniorDiscount - priceTicket;
+else if (userAgeDiscount > 64) {
+    let priceFinal = priceTicket - ((priceTicket * 40)/ 100);
+    console.log (priceFinal);
+}
+
+function financial(priceFinal) {
+    return Number.parseFloat(priceFinal).toFixed(2);
+  }
+  
 
 
-// const userAge = prompt ('Inserire età viaggiatore')
+
+
+// funzione tofixed;
+
+// a = ....
+
+// if (...)  { modifico a}
+// else if ( ...) { modifico a}
+
+// console.log(a)
+
+
 
 
